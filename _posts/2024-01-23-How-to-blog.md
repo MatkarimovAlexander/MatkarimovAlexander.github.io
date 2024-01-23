@@ -46,6 +46,7 @@ https://en.wikipedia.org/wiki/Windows-1252
 Теперь заходим в наш репозиторий на github/settings
 
 слева заходим в pages
+
 ![My helpful screenshot](/assets/20240123014930.png)
 
 Указываем деплой от ветки, настраиваем наш деплой по ветке master, папка (root)
@@ -57,7 +58,7 @@ https://en.wikipedia.org/wiki/Windows-1252
 Это все конечно замечательно, однако помимо площадки нам нужен мощный инструмент для всего этого. Воспользуемся [Obsidian](https://obsidian.md/)
 Не
 Открываем в Obsidian папку с нашим сайтом, заходим в настройки и указываем что для хранения будущих файлов, будет указана дефолтная папка `_images`
-![My helpful screenshot](20240123020120.png)
+![My helpful screenshot](/assets/20240123020120.png)
 
 Не забудем добавить в .gitignore .obsidian
 

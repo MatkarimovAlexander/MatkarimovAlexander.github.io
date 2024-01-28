@@ -15,4 +15,4 @@ test
 ![](assets/Pasted%20image%2020240129000824.png)
 ![](../assets/2024-01-28-Making-Obsidian-Friendly-for-jekyll-3.png)
 
-![](../assets/2024-01-28-Making-Obsidian-Friendly-for-jekyll-4.png)
+![](/assets/2024-01-28-Making-Obsidian-Friendly-for-jekyll-4.png)

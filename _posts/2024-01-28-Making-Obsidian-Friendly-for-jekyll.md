@@ -4,4 +4,4 @@ title: Адаптируем Obsidian для jekyll
 ---
 test
 
-![](Pasted%20image%2020240128235453.png)
+![](assets/Pasted%20image%2020240128235917.png)

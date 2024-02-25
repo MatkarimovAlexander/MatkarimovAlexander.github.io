@@ -8,7 +8,9 @@ title: Пишем перехватчик активного окна в Windows
 # Ингредиенты
 Начнем с того, что нам нужно написать нашу утилиту не через консольное приложение, а именно в том, где есть цикл сообщений, т.е WinForm
 
-`The client thread that calls **SetWinEventHook** must have a message loop in order to receive events.`
+```
+The client thread that calls **SetWinEventHook** must have a message loop in order to receive events.
+```
 
 Самой главной функцией будет [SetWinEventHook](https://learn.microsoft.com/ru-ru/windows/win32/api/winuser/nf-winuser-setwineventhook?redirectedfrom=MSDN).
 Вкратце он устанавливает глобальный хук события, который позволяет приложению получать уведомления о различных событиях системы, таких как активация окон.
@@ -24,8 +26,8 @@ title: Пишем перехватчик активного окна в Windows
 ```
 Окно переднего плана изменилось. Система отправляет это событие, даже если окно переднего плана изменилось на другое окно в том же потоке. Серверные приложения никогда не отправляют данное событие.
 ```
-Так же мы должны указать что наш перехватчик должен быть ВНЕ контекста, а не В, подробнее:
-https://learn.microsoft.com/ru-ru/windows/win32/winauto/in-context-and-out-of-context-hook-functions
+Так же мы должны указать что наш перехватчик должен быть ВНЕ контекста, а не В,[подробнее](https://learn.microsoft.com/ru-ru/windows/win32/winauto/in-context-and-out-of-context-hook-functions)
+
 
 Следовательно должны выбрать WINEVENT_OUTOFCONTEXT.
 
@@ -38,8 +40,7 @@ https://learn.microsoft.com/ru-ru/windows/win32/winauto/in-context-and-out-of-co
 Поскольку у нас WINEVENT_OUTOFCONTEXT, следовательно, hmodWinEventProc должен быть IntPtr.Zero
 
 Последнее pfnWinEventProc является ссылкой на делегат
-напишем его по
-https://learn.microsoft.com/ru-ru/windows/win32/api/winuser/nc-winuser-wineventproc
+напишем его по [образу и подобию](https://learn.microsoft.com/ru-ru/windows/win32/api/winuser/nc-winuser-wineventproc)
 
 ```cs
 public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);

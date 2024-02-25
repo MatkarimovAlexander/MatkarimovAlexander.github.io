@@ -134,7 +134,7 @@ public class ActiveWindowTracker
 }
 ```
 
-Последний штрих, вызовем наш класс запустив задачу.
+Последний штрих, вызовем наш класс, запустив задачу.
 ```cs
 internal static class Program
     {

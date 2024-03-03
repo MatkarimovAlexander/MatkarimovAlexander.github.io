@@ -207,6 +207,7 @@ namespace PipeBaba
 ```
 
 А так же получателя Keke.
+
 ![](/assets/Pasted%20image%2020240304013500.png)
 
 ```cs
@@ -261,14 +262,17 @@ namespace PipeKeke
 Может!
 
 Создадим проект на .net framework 4.8.1, назовем его JIJI.
+
 ![](/assets/Pasted%20image%2020240304013547.png)
 
 Код отправления и получения сообщений для него будет работать абсолютно так же(главное не забыть поправить using).
 
 Baba(.net 5.0) отправляет сообщение JIJI 
+
 ![](/assets/Pasted%20image%2020240304013602.png)
 
 JIJI отправляет сообщение Keke(.net 5.0)
+
 ![](/assets/Pasted%20image%2020240304013614.png)
 
 ![](/assets/Pasted%20image%2020240304013627.png)

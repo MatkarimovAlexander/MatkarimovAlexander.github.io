@@ -142,7 +142,8 @@ namespace Sender
 
 ```
 ## Результат
-![[/assets/Pasted image 20240303231119.png]]
+![](assets/Pasted%20image%2020240304013402.png)
+
 [Подробнее](https://learn.microsoft.com/ru-ru/dotnet/fundamentals/networking/sockets/socket-services)
 
 # Вариант 3 System.IO.Pipes
@@ -150,7 +151,7 @@ namespace Sender
 System.IO.Pipelines — это библиотека в .NET, предоставляющая высокоуровневый API для обработки потоков данных с использованием концепции "каналов" (pipelines). Она разработана для облегчения работы с потоковыми данными таким образом, чтобы минимизировать количество аллокаций памяти и копирования данных.
 
 Создадим консольное приложение на .net 5, отправителя сообщений с позывным Baba.
-![[/assets/Pasted image 20240304010201.png]]
+![](assets/Pasted%20image%2020240304013434.png)
 
 ```cs
 using System;
@@ -202,7 +203,7 @@ namespace PipeBaba
 ```
 
 А так же получателя Keke.
-![[/assets/Pasted image 20240304010044.png]]
+![](assets/Pasted%20image%2020240304013500.png)
 
 ```cs
 using System;
@@ -247,26 +248,26 @@ namespace PipeKeke
 
 ```
 ### Результат
-![[/assets/Pasted image 20240304002923.png]]
+![](assets/Pasted%20image%2020240304013516.png)
 
-![[/assets/Pasted image 20240304002942.png]]
+![](assets/Pasted%20image%2020240304013526.png)
 
 Однако оба наших проекта используют платформу .Net 5, а может ли эта библиотека быть посредником между приложениями на .NET 5 и .NET Framework?
 
 Может!
 
 Создадим проект на .net framework 4.8.1, назовем его JIJI.
-![[/assets/Pasted image 20240304003739.png]]
+![](assets/Pasted%20image%2020240304013547.png)
 
 Код отправления и получения сообщений для него будет работать абсолютно так же(главное не забыть поправить using).
 
 Baba(.net 5.0) отправляет сообщение JIJI 
-![[/assets/Pasted image 20240304003446.png]]
+![](assets/Pasted%20image%2020240304013602.png)
 
 JIJI отправляет сообщение Keke(.net 5.0)
-![[/assets/Pasted image 20240304003629.png]]
+![](assets/Pasted%20image%2020240304013614.png)
 
-![[/assets/Pasted image 20240304003642.png]]
+![](assets/Pasted%20image%2020240304013627.png)
 
 Как вы теперь понимаете, у нас нет преград в рамках отправки/получении сообщений между несколькими процессами, построенными на разных платформах.
 
